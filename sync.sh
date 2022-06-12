@@ -9,6 +9,7 @@ repo sync -c --force-sync -j16 --no-clone-bundle --no-tags
 MAKE_TARGET="bacon" 
 zip=o*/t*/p*/w*/*.zip
 source build/envsetup.sh
-lunch spark_whyred-userdebug 
+lunch spark_whyred-userdebug
+export SELINUX_IGNORE_NEVERALLOWS=true
 make sepolicy
 ##
